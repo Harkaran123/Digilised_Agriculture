@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+.container{
+   
+    background-image: url("Home_page_img.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.liveinfo{
+    position: absolute;
+    margin: 100px 0 0 30px;
+    height: 30%;
+    width: 15%;
+    background-color: rgb(8, 164, 8);
+    text-align: center;
+    opacity: 0.8;
+    border-radius: 2%;
+}
+.liveinfo h1{
+    margin-top: 10px;
+    color: rgb(77, 222, 77);
+    font-family: Verdana;
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.values{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 20px auto;
+    
+}
+.values h2{
+    color: rgb(1, 26, 1);
+   
+}
+
+.values label{
+    color: rgb(88, 237, 88);
+    font-size: 20px;
+}
+
+.values input{
+    background-color: rgb(138, 216, 138);
+    border: none;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.box{
+    width: 15%;
+    height: 40%;
+    margin: 200px auto;
+    background-image: url("Home_page_img.jpg");
+}
+
+li, a, button{
+    text-decoration: none;
+}
+
+.header{
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 10%;
+    background-color: rgb(2, 129, 2);
+    opacity: 0.8;
+}
+
+#logo_text{
+    margin: 0.5%;
+    color: rgb(172, 227, 172);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo_div{
+    margin-left: 10px;
+    background-color: red;
+}
+
+.logo{
+    height: 140%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0 rgb(202, 236, 202);
+}
+
+.nav_links{
+    /* background-color: wheat; */
+}
+
+.nav_links li a{
+    color: rgb(176, 234, 176);
+    font-size: 21px;
+    font-family:verdana;
+}
+
+.nav_links li{
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+.nav_links a{
+    /* transition: all 0.3s ease 0s; */
+}
+
+.nav_links a:hover{
+    color: rgb(108, 230, 108);
+}
+
+.contact button{
+    color: rgb(1, 62, 1);
+    padding: 15px 25px;
+    background-color: rgb(108, 230, 108);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family:verdana;
+    /* transition: all 0.3s ease 0s; */
+}
+
+.contact button:hover{
+    background-color: rgb(41, 189, 41);
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flex input{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.happyform{
+    height: 100%;
+    width: 100%;
+    background-image: url("login_img.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+
+.form{
+    height: 60%;
+    width: 25%;
+    position: relative;
+    background-color: rgb(16, 135, 16);
+    margin: 8% auto;
+    padding: 6px;
+    border-radius: 1%;
+    overflow: hidden;
+}
+
+.button_box{
+    width: 220px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0 rgb(202, 236, 202);
+    position: relative;
+    margin: 35px auto;
+}
+
+.toggle_btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, rgb(2, 165, 2), rgb(54, 237, 54));
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.social_icons{
+    margin: auto;
+    text-align: center;
+ 
+
+}
+.social_icons img{
+    width: 30px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px 0px rgb(127, 202, 127);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.form_text{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    transition: 0.5s;
+
+}
+
+.text_field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0px;
+    border-top: 0px;
+    border-right: 0;
+    border-left: 0px;
+    border-bottom: 1px solid rgb(125, 242, 125);
+    outline: none;
+    background: transparent;
+    
+}
+
+.submit_btn{
+    width: 55%;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin: auto ;
+    display: block;
+    background: linear-gradient(to right, rgb(2, 165, 2), rgb(54, 237, 54));
+    border: 0px;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check_box{
+    margin: 30px 10px 30px 3px;
+
+}
+
+span{
+    color: rgb(144, 240, 144);
+    font-size: 15px;
+    position: absolute;
+    bottom: 145px;
+
+}
+
+::placeholder{
+    color: rgb(165, 239, 165);
+}
+
+input[type=checkbox] {
+    accent-color: rgb(165, 239, 165);
+  }
+
+#login{
+    left: 85px;
+}
+
+#register{
+    left: 485px;
+}
+
+.form_text a{
+    text-decoration: none;
+}
+
+.contactform form div{
+    padding: 7px 27px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.contactform form div input{
+    width: 20vw;
+    margin: 2px 0 0 0;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.contactform button{
+    margin: 8px 0 0 28px;
+    width: 90px;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 21px;
+    background-color: rgb(8, 200, 8);
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.contactform button:hover{
+    background-color: rgb(119, 230, 119);
+}
+
+.contactform h1{
+    margin-left: 23px;
+}
+
+.history{
+    background-image: url("Agri_Image.jpg");
+}
+
+.toggle_motor{
+    margin-top: 23%;
+    margin-left: 4%;
+    background-color: rgb(8, 164, 8);
+    width:10%;
+    height: 12%;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+
+.toggle_motor h3{
+    margin-left: 40px;
+    margin-top: 20px;
+    padding: 2px;
+    color: rgb(1, 54, 1);
+}
+
+.toggle_motor h4{
+    margin-left: 72px;
+    color: rgb(1, 54, 1);
+}
+
+.toggle_motor input{
+    display: none;
+}
+
+.toggle_motor label{
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 50px;
+    background: rgb(4, 180, 4);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 300ms linear;
+    margin: 10px auto;
+}
+
+.toggle_motor label:before{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(125, 234, 125);
+    border-radius: 50px;
+    transition: left 300ms linear;
+}
+
+.toggle_motor input:checked + label{
+    background: rgb(1, 103, 1);
+}
+
+.toggle_motor input:checked + label:before{
+    left: 25px;
+}
+
+.caution{
+    margin-left: 40%;
+    margin-top: 10px;
+    color: red;
+    
+}
+
+

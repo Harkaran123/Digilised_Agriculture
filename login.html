@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="happyform">
+        <div class="form" >
+            <div class="button_box">
+                <div id="btn"></div>
+                <button type="button" class="toggle_btn" onclick="login()">Log IN</button>
+                <button type="button" class="toggle_btn" onclick="register()">Register</button>
+            
+            </div>
+
+            <div class="social_icons">
+                <img src="google_icon.png", alt="google">
+                <img src="twitter_icon.png", alt="twitter">
+                <img src="facebook_icon.png", alt="facebook">
+            </div>
+
+            <form id="login" class="form_text" method="post">
+                <input type="text" class="text_field" name="Email" placeholder="Enter Email">
+                <input type="text" class="text_field" name="Enter Password" placeholder="Enter Password">
+                <input type="checkbox", class="check_box" name="Remember Password"><span>Remember Password</span>
+                <button onclick=href() class="submit_btn">Login</button>
+            </form>
+
+            
+            <form id="register" class="form_text">
+                <input type="email" class="text_field" id="email" name="Email" placeholder="Enter Email">
+                <input type="password" class="text_field" id="password" name="Enter Password" placeholder="Enter Password">
+                <input type="checkbox", class="check_box" name="Remember Password"><span>I agree to the terms and conditions</span>
+                <button type="submit" class="submit_btn" id="signUp" onclick="reg()">Register</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-485px";
+            y.style.left = "85px";
+            z.style.left = "110px";
+        }
+
+        function login(){
+            x.style.left = "85px";
+            y.style.left = "485px";
+            z.style.left = "0px";
+        }
+
+        function hrefFunction(){
+                windows.location.href = "index.html";
+            }
+
+    </script>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getDatabase, set, ref, update  } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+    
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBrTimg6XYOSTJ5Q84UB4UjER7r_CCYvtY",
+      authDomain: "authentication-app-7351d.firebaseapp.com",
+      databaseURL: "https://authentication-app-7351d-default-rtdb.firebaseio.com",
+      projectId: "authentication-app-7351d",
+      storageBucket: "authentication-app-7351d.appspot.com",
+      messagingSenderId: "1077623935896",
+      appId: "1:1077623935896:web:51241b86868920d26051ed"
+    };
+  
+    firebase.initializeApp(firebaseConfig);
+    const app = initializeApp(firebaseConfig);
+
+    const auth = app.auth();
+    const database = app.database();
+
+  function reg(){
+    email = document.getElementById('email').value;
+    password = document.getElementById('password').value;
+
+    auth.createUserWithEmailAndPassword(email, password)
+    .then(function(){
+        var user = auth.currentUser;
+
+        var database_ref = database.ref();
+
+        var user_data = {
+          email : email,
+          last_login : Date.now()
+        }
+     
+        database_ref.child('users/' + user.uid).set(user_data)
+
+        alert('User Logged In!!')
+    }) 
+    .catch(function(error){
+        var error_code = error.code;
+        var error_message = error.message;
+
+        alert(error_message);
+
+    })
+  }
+
+  // Initialize Firebase
+  </script>
+
+
+ 
+
+<script type="module" src="index.js"></script>
+
+    
+</body>
+</html>
